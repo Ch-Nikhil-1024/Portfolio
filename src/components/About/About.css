@@ -1,0 +1,64 @@
+.about-section {
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+}
+
+.about-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 3rem;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  border-color: rgba(156, 255, 46, 0.3);
+}
+
+.about-card-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.about-card p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+.card-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(156, 255, 46, 0.2) 0%, rgba(20, 20, 20, 0) 70%);
+  border-radius: 50%;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+
+.about-card:hover .card-glow {
+  transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+  .about-card {
+    padding: 2rem;
+  }
+}
